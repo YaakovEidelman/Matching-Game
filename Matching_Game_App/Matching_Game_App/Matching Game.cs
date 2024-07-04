@@ -46,21 +46,28 @@ namespace Matching_Game_App
             });
         }
 
+        private void RevealCard(Button b)
+        {
+            if (gamestate == GameStatus.playing)
+            {
+                b.ForeColor = Color.Black;
+            }
+        }
+
+
+
         private void BtnStart_Click(object? sender, EventArgs e)
         {
             gamestate = GameStatus.playing;
             PlaceImagesOnCards();
+            lstbuttons.ForEach(b => b.ForeColor = b.BackColor);
         }
 
         private void Card_Click(object? sender, EventArgs e)
         {
             if (sender != null)
             {
-                var clickedButton = (Button)sender;
-                if (gamestate == GameStatus.playing)
-                {
-                    lblStatus.Text = "Hi";
-                }
+                RevealCard((Button)sender);
             }
         }
 
