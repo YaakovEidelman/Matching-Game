@@ -32,34 +32,54 @@
             tlpStats = new TableLayoutPanel();
             btnStart = new Button();
             lblStatus = new Label();
+            lblPlayer1 = new Label();
+            lblPlayer2 = new Label();
+            lblPlayerOneScore = new Label();
+            lblPlayerTwoScore = new Label();
             tlpGameBoard = new TableLayoutPanel();
-            btn1 = new Button();
-            btn2 = new Button();
-            btn3 = new Button();
-            btn4 = new Button();
-            btn5 = new Button();
-            btn6 = new Button();
-            btn7 = new Button();
-            btn8 = new Button();
-            btn9 = new Button();
-            btn10 = new Button();
-            btn11 = new Button();
-            btn12 = new Button();
-            btn13 = new Button();
-            btn14 = new Button();
-            btn15 = new Button();
-            btn16 = new Button();
-            btn17 = new Button();
-            btn18 = new Button();
-            btn19 = new Button();
-            btn20 = new Button();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
+            pic1 = new PictureBox();
+            pic2 = new PictureBox();
+            pic3 = new PictureBox();
+            pic4 = new PictureBox();
+            pic5 = new PictureBox();
+            pic6 = new PictureBox();
+            pic7 = new PictureBox();
+            pic8 = new PictureBox();
+            pic9 = new PictureBox();
+            pic10 = new PictureBox();
+            pic11 = new PictureBox();
+            pic12 = new PictureBox();
+            pic13 = new PictureBox();
+            pic14 = new PictureBox();
+            pic15 = new PictureBox();
+            pic16 = new PictureBox();
+            pic17 = new PictureBox();
+            pic18 = new PictureBox();
+            pic19 = new PictureBox();
+            pic20 = new PictureBox();
             tlpMain.SuspendLayout();
             tlpStats.SuspendLayout();
             tlpGameBoard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pic1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic10).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic11).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic12).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic13).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic14).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic15).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic16).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic17).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic18).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic19).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic20).BeginInit();
             SuspendLayout();
             // 
             // tlpMain
@@ -88,10 +108,10 @@
             tlpStats.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             tlpStats.Controls.Add(btnStart, 0, 0);
             tlpStats.Controls.Add(lblStatus, 0, 1);
-            tlpStats.Controls.Add(label1, 2, 0);
-            tlpStats.Controls.Add(label2, 2, 1);
-            tlpStats.Controls.Add(label3, 3, 0);
-            tlpStats.Controls.Add(label4, 3, 1);
+            tlpStats.Controls.Add(lblPlayer1, 2, 0);
+            tlpStats.Controls.Add(lblPlayer2, 2, 1);
+            tlpStats.Controls.Add(lblPlayerOneScore, 3, 0);
+            tlpStats.Controls.Add(lblPlayerTwoScore, 3, 1);
             tlpStats.Dock = DockStyle.Fill;
             tlpStats.Location = new Point(3, 3);
             tlpStats.Name = "tlpStats";
@@ -126,6 +146,54 @@
             lblStatus.Text = "Click Start to Play";
             lblStatus.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // lblPlayer1
+            // 
+            lblPlayer1.AutoSize = true;
+            lblPlayer1.Dock = DockStyle.Fill;
+            lblPlayer1.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPlayer1.Location = new Point(741, 0);
+            lblPlayer1.Name = "lblPlayer1";
+            lblPlayer1.Size = new Size(363, 81);
+            lblPlayer1.TabIndex = 3;
+            lblPlayer1.Text = "Player 1 Score:";
+            lblPlayer1.TextAlign = ContentAlignment.BottomRight;
+            // 
+            // lblPlayer2
+            // 
+            lblPlayer2.AutoSize = true;
+            lblPlayer2.Dock = DockStyle.Fill;
+            lblPlayer2.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPlayer2.Location = new Point(741, 81);
+            lblPlayer2.Name = "lblPlayer2";
+            lblPlayer2.Size = new Size(363, 81);
+            lblPlayer2.TabIndex = 4;
+            lblPlayer2.Text = "Player 2 Score:";
+            lblPlayer2.TextAlign = ContentAlignment.BottomRight;
+            // 
+            // lblPlayerOneScore
+            // 
+            lblPlayerOneScore.AutoSize = true;
+            lblPlayerOneScore.Dock = DockStyle.Fill;
+            lblPlayerOneScore.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPlayerOneScore.Location = new Point(1110, 0);
+            lblPlayerOneScore.Name = "lblPlayerOneScore";
+            lblPlayerOneScore.Size = new Size(363, 81);
+            lblPlayerOneScore.TabIndex = 5;
+            lblPlayerOneScore.Text = "0";
+            lblPlayerOneScore.TextAlign = ContentAlignment.BottomLeft;
+            // 
+            // lblPlayerTwoScore
+            // 
+            lblPlayerTwoScore.AutoSize = true;
+            lblPlayerTwoScore.Dock = DockStyle.Fill;
+            lblPlayerTwoScore.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPlayerTwoScore.Location = new Point(1110, 81);
+            lblPlayerTwoScore.Name = "lblPlayerTwoScore";
+            lblPlayerTwoScore.Size = new Size(363, 81);
+            lblPlayerTwoScore.TabIndex = 6;
+            lblPlayerTwoScore.Text = "0";
+            lblPlayerTwoScore.TextAlign = ContentAlignment.BottomLeft;
+            // 
             // tlpGameBoard
             // 
             tlpGameBoard.ColumnCount = 5;
@@ -134,26 +202,26 @@
             tlpGameBoard.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
             tlpGameBoard.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
             tlpGameBoard.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
-            tlpGameBoard.Controls.Add(btn1, 0, 0);
-            tlpGameBoard.Controls.Add(btn2, 1, 0);
-            tlpGameBoard.Controls.Add(btn3, 2, 0);
-            tlpGameBoard.Controls.Add(btn4, 3, 0);
-            tlpGameBoard.Controls.Add(btn5, 4, 0);
-            tlpGameBoard.Controls.Add(btn6, 0, 1);
-            tlpGameBoard.Controls.Add(btn7, 1, 1);
-            tlpGameBoard.Controls.Add(btn8, 2, 1);
-            tlpGameBoard.Controls.Add(btn9, 3, 1);
-            tlpGameBoard.Controls.Add(btn10, 4, 1);
-            tlpGameBoard.Controls.Add(btn11, 0, 2);
-            tlpGameBoard.Controls.Add(btn12, 1, 2);
-            tlpGameBoard.Controls.Add(btn13, 2, 2);
-            tlpGameBoard.Controls.Add(btn14, 3, 2);
-            tlpGameBoard.Controls.Add(btn15, 4, 2);
-            tlpGameBoard.Controls.Add(btn16, 0, 3);
-            tlpGameBoard.Controls.Add(btn17, 0, 3);
-            tlpGameBoard.Controls.Add(btn18, 1, 3);
-            tlpGameBoard.Controls.Add(btn19, 2, 3);
-            tlpGameBoard.Controls.Add(btn20, 3, 3);
+            tlpGameBoard.Controls.Add(pic1, 0, 0);
+            tlpGameBoard.Controls.Add(pic2, 1, 0);
+            tlpGameBoard.Controls.Add(pic3, 2, 0);
+            tlpGameBoard.Controls.Add(pic4, 3, 0);
+            tlpGameBoard.Controls.Add(pic5, 4, 0);
+            tlpGameBoard.Controls.Add(pic6, 0, 1);
+            tlpGameBoard.Controls.Add(pic7, 1, 1);
+            tlpGameBoard.Controls.Add(pic8, 2, 1);
+            tlpGameBoard.Controls.Add(pic9, 3, 1);
+            tlpGameBoard.Controls.Add(pic10, 4, 1);
+            tlpGameBoard.Controls.Add(pic11, 0, 2);
+            tlpGameBoard.Controls.Add(pic12, 1, 2);
+            tlpGameBoard.Controls.Add(pic13, 2, 2);
+            tlpGameBoard.Controls.Add(pic14, 3, 2);
+            tlpGameBoard.Controls.Add(pic15, 4, 2);
+            tlpGameBoard.Controls.Add(pic16, 0, 3);
+            tlpGameBoard.Controls.Add(pic17, 1, 3);
+            tlpGameBoard.Controls.Add(pic18, 2, 3);
+            tlpGameBoard.Controls.Add(pic19, 3, 3);
+            tlpGameBoard.Controls.Add(pic20, 4, 3);
             tlpGameBoard.Dock = DockStyle.Fill;
             tlpGameBoard.Location = new Point(3, 171);
             tlpGameBoard.Name = "tlpGameBoard";
@@ -166,253 +234,205 @@
             tlpGameBoard.Size = new Size(1476, 669);
             tlpGameBoard.TabIndex = 0;
             // 
-            // btn1
+            // pic1
             // 
-            btn1.BackColor = Color.Lime;
-            btn1.Dock = DockStyle.Fill;
-            btn1.Location = new Point(3, 3);
-            btn1.Name = "btn1";
-            btn1.Size = new Size(289, 161);
-            btn1.TabIndex = 0;
-            btn1.UseVisualStyleBackColor = false;
+            pic1.BackColor = Color.FromArgb(192, 255, 192);
+            pic1.Dock = DockStyle.Fill;
+            pic1.Location = new Point(3, 3);
+            pic1.Name = "pic1";
+            pic1.Size = new Size(289, 161);
+            pic1.TabIndex = 20;
+            pic1.TabStop = false;
             // 
-            // btn2
+            // pic2
             // 
-            btn2.BackColor = Color.Lime;
-            btn2.Dock = DockStyle.Fill;
-            btn2.Location = new Point(298, 3);
-            btn2.Name = "btn2";
-            btn2.Size = new Size(289, 161);
-            btn2.TabIndex = 1;
-            btn2.UseVisualStyleBackColor = false;
+            pic2.BackColor = Color.FromArgb(192, 255, 192);
+            pic2.Dock = DockStyle.Fill;
+            pic2.Location = new Point(298, 3);
+            pic2.Name = "pic2";
+            pic2.Size = new Size(289, 161);
+            pic2.TabIndex = 21;
+            pic2.TabStop = false;
             // 
-            // btn3
+            // pic3
             // 
-            btn3.BackColor = Color.Lime;
-            btn3.Dock = DockStyle.Fill;
-            btn3.Location = new Point(593, 3);
-            btn3.Name = "btn3";
-            btn3.Size = new Size(289, 161);
-            btn3.TabIndex = 2;
-            btn3.UseVisualStyleBackColor = false;
+            pic3.BackColor = Color.FromArgb(192, 255, 192);
+            pic3.Dock = DockStyle.Fill;
+            pic3.Location = new Point(593, 3);
+            pic3.Name = "pic3";
+            pic3.Size = new Size(289, 161);
+            pic3.TabIndex = 0;
+            pic3.TabStop = false;
             // 
-            // btn4
+            // pic4
             // 
-            btn4.BackColor = Color.Lime;
-            btn4.Dock = DockStyle.Fill;
-            btn4.Location = new Point(888, 3);
-            btn4.Name = "btn4";
-            btn4.Size = new Size(289, 161);
-            btn4.TabIndex = 3;
-            btn4.UseVisualStyleBackColor = false;
+            pic4.BackColor = Color.FromArgb(192, 255, 192);
+            pic4.Dock = DockStyle.Fill;
+            pic4.Location = new Point(888, 3);
+            pic4.Name = "pic4";
+            pic4.Size = new Size(289, 161);
+            pic4.TabIndex = 22;
+            pic4.TabStop = false;
             // 
-            // btn5
+            // pic5
             // 
-            btn5.BackColor = Color.Lime;
-            btn5.Dock = DockStyle.Fill;
-            btn5.Location = new Point(1183, 3);
-            btn5.Name = "btn5";
-            btn5.Size = new Size(290, 161);
-            btn5.TabIndex = 4;
-            btn5.UseVisualStyleBackColor = false;
+            pic5.BackColor = Color.FromArgb(192, 255, 192);
+            pic5.Dock = DockStyle.Fill;
+            pic5.Location = new Point(1183, 3);
+            pic5.Name = "pic5";
+            pic5.Size = new Size(290, 161);
+            pic5.TabIndex = 23;
+            pic5.TabStop = false;
             // 
-            // btn6
+            // pic6
             // 
-            btn6.BackColor = Color.Lime;
-            btn6.Dock = DockStyle.Fill;
-            btn6.Location = new Point(3, 170);
-            btn6.Name = "btn6";
-            btn6.Size = new Size(289, 161);
-            btn6.TabIndex = 5;
-            btn6.UseVisualStyleBackColor = false;
+            pic6.BackColor = Color.FromArgb(192, 255, 192);
+            pic6.Dock = DockStyle.Fill;
+            pic6.Location = new Point(3, 170);
+            pic6.Name = "pic6";
+            pic6.Size = new Size(289, 161);
+            pic6.TabIndex = 24;
+            pic6.TabStop = false;
             // 
-            // btn7
+            // pic7
             // 
-            btn7.BackColor = Color.Lime;
-            btn7.Dock = DockStyle.Fill;
-            btn7.Location = new Point(298, 170);
-            btn7.Name = "btn7";
-            btn7.Size = new Size(289, 161);
-            btn7.TabIndex = 6;
-            btn7.UseVisualStyleBackColor = false;
+            pic7.BackColor = Color.FromArgb(192, 255, 192);
+            pic7.Dock = DockStyle.Fill;
+            pic7.Location = new Point(298, 170);
+            pic7.Name = "pic7";
+            pic7.Size = new Size(289, 161);
+            pic7.TabIndex = 25;
+            pic7.TabStop = false;
             // 
-            // btn8
+            // pic8
             // 
-            btn8.BackColor = Color.Lime;
-            btn8.Dock = DockStyle.Fill;
-            btn8.Location = new Point(593, 170);
-            btn8.Name = "btn8";
-            btn8.Size = new Size(289, 161);
-            btn8.TabIndex = 7;
-            btn8.UseVisualStyleBackColor = false;
+            pic8.BackColor = Color.FromArgb(192, 255, 192);
+            pic8.Dock = DockStyle.Fill;
+            pic8.Location = new Point(593, 170);
+            pic8.Name = "pic8";
+            pic8.Size = new Size(289, 161);
+            pic8.TabIndex = 26;
+            pic8.TabStop = false;
             // 
-            // btn9
+            // pic9
             // 
-            btn9.BackColor = Color.Lime;
-            btn9.Dock = DockStyle.Fill;
-            btn9.Location = new Point(888, 170);
-            btn9.Name = "btn9";
-            btn9.Size = new Size(289, 161);
-            btn9.TabIndex = 8;
-            btn9.UseVisualStyleBackColor = false;
+            pic9.BackColor = Color.FromArgb(192, 255, 192);
+            pic9.Dock = DockStyle.Fill;
+            pic9.Location = new Point(888, 170);
+            pic9.Name = "pic9";
+            pic9.Size = new Size(289, 161);
+            pic9.TabIndex = 27;
+            pic9.TabStop = false;
             // 
-            // btn10
+            // pic10
             // 
-            btn10.BackColor = Color.Lime;
-            btn10.Dock = DockStyle.Fill;
-            btn10.Location = new Point(1183, 170);
-            btn10.Name = "btn10";
-            btn10.Size = new Size(290, 161);
-            btn10.TabIndex = 9;
-            btn10.UseVisualStyleBackColor = false;
+            pic10.BackColor = Color.FromArgb(192, 255, 192);
+            pic10.Dock = DockStyle.Fill;
+            pic10.Location = new Point(1183, 170);
+            pic10.Name = "pic10";
+            pic10.Size = new Size(290, 161);
+            pic10.TabIndex = 28;
+            pic10.TabStop = false;
             // 
-            // btn11
+            // pic11
             // 
-            btn11.BackColor = Color.Lime;
-            btn11.Dock = DockStyle.Fill;
-            btn11.Location = new Point(3, 337);
-            btn11.Name = "btn11";
-            btn11.Size = new Size(289, 161);
-            btn11.TabIndex = 10;
-            btn11.UseVisualStyleBackColor = false;
+            pic11.BackColor = Color.FromArgb(192, 255, 192);
+            pic11.Dock = DockStyle.Fill;
+            pic11.Location = new Point(3, 337);
+            pic11.Name = "pic11";
+            pic11.Size = new Size(289, 161);
+            pic11.TabIndex = 29;
+            pic11.TabStop = false;
             // 
-            // btn12
+            // pic12
             // 
-            btn12.BackColor = Color.Lime;
-            btn12.Dock = DockStyle.Fill;
-            btn12.Location = new Point(298, 337);
-            btn12.Name = "btn12";
-            btn12.Size = new Size(289, 161);
-            btn12.TabIndex = 11;
-            btn12.UseVisualStyleBackColor = false;
+            pic12.BackColor = Color.FromArgb(192, 255, 192);
+            pic12.Dock = DockStyle.Fill;
+            pic12.Location = new Point(298, 337);
+            pic12.Name = "pic12";
+            pic12.Size = new Size(289, 161);
+            pic12.TabIndex = 30;
+            pic12.TabStop = false;
             // 
-            // btn13
+            // pic13
             // 
-            btn13.BackColor = Color.Lime;
-            btn13.Dock = DockStyle.Fill;
-            btn13.Location = new Point(593, 337);
-            btn13.Name = "btn13";
-            btn13.Size = new Size(289, 161);
-            btn13.TabIndex = 12;
-            btn13.UseVisualStyleBackColor = false;
+            pic13.BackColor = Color.FromArgb(192, 255, 192);
+            pic13.Dock = DockStyle.Fill;
+            pic13.Location = new Point(593, 337);
+            pic13.Name = "pic13";
+            pic13.Size = new Size(289, 161);
+            pic13.TabIndex = 31;
+            pic13.TabStop = false;
             // 
-            // btn14
+            // pic14
             // 
-            btn14.BackColor = Color.Lime;
-            btn14.Dock = DockStyle.Fill;
-            btn14.Location = new Point(888, 337);
-            btn14.Name = "btn14";
-            btn14.Size = new Size(289, 161);
-            btn14.TabIndex = 13;
-            btn14.UseVisualStyleBackColor = false;
+            pic14.BackColor = Color.FromArgb(192, 255, 192);
+            pic14.Dock = DockStyle.Fill;
+            pic14.Location = new Point(888, 337);
+            pic14.Name = "pic14";
+            pic14.Size = new Size(289, 161);
+            pic14.TabIndex = 32;
+            pic14.TabStop = false;
             // 
-            // btn15
+            // pic15
             // 
-            btn15.BackColor = Color.Lime;
-            btn15.Dock = DockStyle.Fill;
-            btn15.Location = new Point(1183, 337);
-            btn15.Name = "btn15";
-            btn15.Size = new Size(290, 161);
-            btn15.TabIndex = 14;
-            btn15.UseVisualStyleBackColor = false;
+            pic15.BackColor = Color.FromArgb(192, 255, 192);
+            pic15.Dock = DockStyle.Fill;
+            pic15.Location = new Point(1183, 337);
+            pic15.Name = "pic15";
+            pic15.Size = new Size(290, 161);
+            pic15.TabIndex = 33;
+            pic15.TabStop = false;
             // 
-            // btn16
+            // pic16
             // 
-            btn16.BackColor = Color.Lime;
-            btn16.Dock = DockStyle.Fill;
-            btn16.Location = new Point(298, 504);
-            btn16.Name = "btn16";
-            btn16.Size = new Size(289, 162);
-            btn16.TabIndex = 16;
-            btn16.UseVisualStyleBackColor = false;
+            pic16.BackColor = Color.FromArgb(192, 255, 192);
+            pic16.Dock = DockStyle.Fill;
+            pic16.Location = new Point(3, 504);
+            pic16.Name = "pic16";
+            pic16.Size = new Size(289, 162);
+            pic16.TabIndex = 34;
+            pic16.TabStop = false;
             // 
-            // btn17
+            // pic17
             // 
-            btn17.BackColor = Color.Lime;
-            btn17.Dock = DockStyle.Fill;
-            btn17.Location = new Point(3, 504);
-            btn17.Name = "btn17";
-            btn17.Size = new Size(289, 162);
-            btn17.TabIndex = 15;
-            btn17.UseVisualStyleBackColor = false;
+            pic17.BackColor = Color.FromArgb(192, 255, 192);
+            pic17.Dock = DockStyle.Fill;
+            pic17.Location = new Point(298, 504);
+            pic17.Name = "pic17";
+            pic17.Size = new Size(289, 162);
+            pic17.TabIndex = 35;
+            pic17.TabStop = false;
             // 
-            // btn18
+            // pic18
             // 
-            btn18.BackColor = Color.Lime;
-            btn18.Dock = DockStyle.Fill;
-            btn18.Location = new Point(593, 504);
-            btn18.Name = "btn18";
-            btn18.Size = new Size(289, 162);
-            btn18.TabIndex = 17;
-            btn18.UseVisualStyleBackColor = false;
+            pic18.BackColor = Color.FromArgb(192, 255, 192);
+            pic18.Dock = DockStyle.Fill;
+            pic18.Location = new Point(593, 504);
+            pic18.Name = "pic18";
+            pic18.Size = new Size(289, 162);
+            pic18.TabIndex = 36;
+            pic18.TabStop = false;
             // 
-            // btn19
+            // pic19
             // 
-            btn19.BackColor = Color.Lime;
-            btn19.Dock = DockStyle.Fill;
-            btn19.Location = new Point(888, 504);
-            btn19.Name = "btn19";
-            btn19.Size = new Size(289, 162);
-            btn19.TabIndex = 18;
-            btn19.UseVisualStyleBackColor = false;
+            pic19.BackColor = Color.FromArgb(192, 255, 192);
+            pic19.Dock = DockStyle.Fill;
+            pic19.Location = new Point(888, 504);
+            pic19.Name = "pic19";
+            pic19.Size = new Size(289, 162);
+            pic19.TabIndex = 37;
+            pic19.TabStop = false;
             // 
-            // btn20
+            // pic20
             // 
-            btn20.BackColor = Color.Lime;
-            btn20.Dock = DockStyle.Fill;
-            btn20.Location = new Point(1183, 504);
-            btn20.Name = "btn20";
-            btn20.Size = new Size(290, 162);
-            btn20.TabIndex = 19;
-            btn20.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Dock = DockStyle.Fill;
-            label1.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(741, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(363, 81);
-            label1.TabIndex = 3;
-            label1.Text = "Player 1 Score:";
-            label1.TextAlign = ContentAlignment.BottomRight;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Dock = DockStyle.Fill;
-            label2.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(741, 81);
-            label2.Name = "label2";
-            label2.Size = new Size(363, 81);
-            label2.TabIndex = 4;
-            label2.Text = "Player 2 Score:";
-            label2.TextAlign = ContentAlignment.BottomRight;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Dock = DockStyle.Fill;
-            label3.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(1110, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(363, 81);
-            label3.TabIndex = 5;
-            label3.Text = "0";
-            label3.TextAlign = ContentAlignment.BottomLeft;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Dock = DockStyle.Fill;
-            label4.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(1110, 81);
-            label4.Name = "label4";
-            label4.Size = new Size(363, 81);
-            label4.TabIndex = 6;
-            label4.Text = "0";
-            label4.TextAlign = ContentAlignment.BottomLeft;
+            pic20.BackColor = Color.FromArgb(192, 255, 192);
+            pic20.Dock = DockStyle.Fill;
+            pic20.Location = new Point(1183, 504);
+            pic20.Name = "pic20";
+            pic20.Size = new Size(290, 162);
+            pic20.TabIndex = 38;
+            pic20.TabStop = false;
             // 
             // Matching_Game
             // 
@@ -426,6 +446,26 @@
             tlpStats.ResumeLayout(false);
             tlpStats.PerformLayout();
             tlpGameBoard.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pic1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic10).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic11).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic12).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic13).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic14).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic15).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic16).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic17).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic18).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic19).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic20).EndInit();
             ResumeLayout(false);
         }
 
@@ -433,32 +473,32 @@
 
         private TableLayoutPanel tlpMain;
         private TableLayoutPanel tlpGameBoard;
-        private Button btn1;
-        private Button btn2;
-        private Button btn3;
-        private Button btn15;
-        private Button btn6;
-        private Button btn7;
-        private Button btn8;
-        private Button btn9;
-        private Button btn11;
-        private Button btn12;
-        private Button btn13;
-        private Button btn14;
-        private Button btn17;
-        private Button btn18;
-        private Button btn19;
-        private Button btn20;
-        private Button btn16;
-        private Button btn4;
-        private Button btn5;
-        private Button btn10;
         private TableLayoutPanel tlpStats;
         private Button btnStart;
         private Label lblStatus;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
+        private Label lblPlayer1;
+        private Label lblPlayer2;
+        private Label lblPlayerOneScore;
+        private Label lblPlayerTwoScore;
+        private PictureBox pic1;
+        private PictureBox pic2;
+        private PictureBox pic3;
+        private PictureBox pic4;
+        private PictureBox pic5;
+        private PictureBox pic6;
+        private PictureBox pic7;
+        private PictureBox pic8;
+        private PictureBox pic9;
+        private PictureBox pic10;
+        private PictureBox pic11;
+        private PictureBox pic12;
+        private PictureBox pic13;
+        private PictureBox pic14;
+        private PictureBox pic15;
+        private PictureBox pic16;
+        private PictureBox pic17;
+        private PictureBox pic18;
+        private PictureBox pic19;
+        private PictureBox pic20;
     }
 }

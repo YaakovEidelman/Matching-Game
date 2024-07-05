@@ -9,8 +9,57 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="images\" />
-    <Folder Include="images\" />
+    <None Remove="images\background.jpeg" />
+    <None Remove="images\bassclef.jpeg" />
+    <None Remove="images\bumblebee.jpeg" />
+    <None Remove="images\candy.jpeg" />
+    <None Remove="images\card.jpeg" />
+    <None Remove="images\chair.jpeg" />
+    <None Remove="images\dice.jpeg" />
+    <None Remove="images\lamp.jpeg" />
+    <None Remove="images\pen.jpeg" />
+    <None Remove="images\squares.jpeg" />
+    <None Remove="images\trebleclef.jpeg" />
+    <None Remove="images\treblecleff.jpeg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="images\background.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\bassclef.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\bumblebee.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="images\candy.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\card.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\chair.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\dice.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\lamp.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\pen.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\squares.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="images\trebleclef.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
