@@ -88,7 +88,9 @@ namespace Matching_Game_App
                 }
 
                 p.ImageLocation = path + @"\images\background.jpeg";
+
                 p.Enabled = true;
+                p.Visible = true;
                 p.Tag = "notfound";
             });
         }
@@ -105,15 +107,20 @@ namespace Matching_Game_App
                     lstpictures.ForEach(pic => pic.Enabled = false);
                     if (lstpictures.Count(pic => pic.ImageLocation == p.ImageLocation) == 2)
                     {
-                        lstpictures.Where(pic => pic.ImageLocation == p.ImageLocation).ToList().ForEach(pic => pic.Tag = "found");
+                        SetScore(false);
+                        await Task.Delay(1000);
+                        lstpictures.Where(pic => pic.ImageLocation == p.ImageLocation).ToList().ForEach(pic =>
+                        {
+                            pic.Tag = "found";
+                            pic.Visible = false;
+                        });
                         lstpictures.ForEach(pic => pic.Enabled = true);
                         numofclicks = 0;
-                        SetScore(false);
                         SetStatus("You found a Match, go again!!!");
                     }
                     else
                     {
-                        SetStatus("Nice try, try again next turn");
+                        SetStatus("Nice try, try again next turn!");
                         await Task.Delay(3000);
                         HideCards();
                         numofclicks = 0;
@@ -137,11 +144,11 @@ namespace Matching_Game_App
 
         private void SetStatus(string msg = "")
         {
-            if(CheckForEndOfGame())
+            if (CheckForEndOfGame())
             {
                 lblStatus.Text = (p1score > p2score) ? "Player 1 Wins" : (p1score < p2score) ? "Player 2 Wins" : "Tie Game";
             }
-            else if(playeroneturn)
+            else if (playeroneturn)
             {
                 lblStatus.Text = "Player 1 Turn: " + msg;
             }
@@ -152,7 +159,7 @@ namespace Matching_Game_App
         }
         private void SetScore(bool beginningofgame)
         {
-            if(beginningofgame)
+            if (beginningofgame)
             {
                 p1score = 0;
                 p2score = 0;
@@ -170,7 +177,7 @@ namespace Matching_Game_App
         }
         private bool CheckForEndOfGame()
         {
-            if(lstpictures.Count(pic => (string)pic.Tag == "found") == lstpictures.Count())
+            if (lstpictures.Count(pic => (string)pic.Tag == "found") == lstpictures.Count())
             {
                 return true;
             }

@@ -230,7 +230,6 @@
             tlpGameBoard.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tlpGameBoard.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tlpGameBoard.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tlpGameBoard.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tlpGameBoard.Size = new Size(1476, 669);
             tlpGameBoard.TabIndex = 0;
             // 
@@ -241,6 +240,7 @@
             pic1.Location = new Point(3, 3);
             pic1.Name = "pic1";
             pic1.Size = new Size(289, 161);
+            pic1.SizeMode = PictureBoxSizeMode.StretchImage;
             pic1.TabIndex = 20;
             pic1.TabStop = false;
             // 
@@ -251,6 +251,7 @@
             pic2.Location = new Point(298, 3);
             pic2.Name = "pic2";
             pic2.Size = new Size(289, 161);
+            pic2.SizeMode = PictureBoxSizeMode.StretchImage;
             pic2.TabIndex = 21;
             pic2.TabStop = false;
             // 
@@ -261,6 +262,7 @@
             pic3.Location = new Point(593, 3);
             pic3.Name = "pic3";
             pic3.Size = new Size(289, 161);
+            pic3.SizeMode = PictureBoxSizeMode.StretchImage;
             pic3.TabIndex = 0;
             pic3.TabStop = false;
             // 
@@ -271,6 +273,7 @@
             pic4.Location = new Point(888, 3);
             pic4.Name = "pic4";
             pic4.Size = new Size(289, 161);
+            pic4.SizeMode = PictureBoxSizeMode.StretchImage;
             pic4.TabIndex = 22;
             pic4.TabStop = false;
             // 
@@ -281,6 +284,7 @@
             pic5.Location = new Point(1183, 3);
             pic5.Name = "pic5";
             pic5.Size = new Size(290, 161);
+            pic5.SizeMode = PictureBoxSizeMode.StretchImage;
             pic5.TabIndex = 23;
             pic5.TabStop = false;
             // 
@@ -291,6 +295,7 @@
             pic6.Location = new Point(3, 170);
             pic6.Name = "pic6";
             pic6.Size = new Size(289, 161);
+            pic6.SizeMode = PictureBoxSizeMode.StretchImage;
             pic6.TabIndex = 24;
             pic6.TabStop = false;
             // 
@@ -301,6 +306,7 @@
             pic7.Location = new Point(298, 170);
             pic7.Name = "pic7";
             pic7.Size = new Size(289, 161);
+            pic7.SizeMode = PictureBoxSizeMode.StretchImage;
             pic7.TabIndex = 25;
             pic7.TabStop = false;
             // 
@@ -311,6 +317,7 @@
             pic8.Location = new Point(593, 170);
             pic8.Name = "pic8";
             pic8.Size = new Size(289, 161);
+            pic8.SizeMode = PictureBoxSizeMode.StretchImage;
             pic8.TabIndex = 26;
             pic8.TabStop = false;
             // 
@@ -321,6 +328,7 @@
             pic9.Location = new Point(888, 170);
             pic9.Name = "pic9";
             pic9.Size = new Size(289, 161);
+            pic9.SizeMode = PictureBoxSizeMode.StretchImage;
             pic9.TabIndex = 27;
             pic9.TabStop = false;
             // 
@@ -331,6 +339,7 @@
             pic10.Location = new Point(1183, 170);
             pic10.Name = "pic10";
             pic10.Size = new Size(290, 161);
+            pic10.SizeMode = PictureBoxSizeMode.StretchImage;
             pic10.TabIndex = 28;
             pic10.TabStop = false;
             // 
@@ -341,6 +350,7 @@
             pic11.Location = new Point(3, 337);
             pic11.Name = "pic11";
             pic11.Size = new Size(289, 161);
+            pic11.SizeMode = PictureBoxSizeMode.StretchImage;
             pic11.TabIndex = 29;
             pic11.TabStop = false;
             // 
@@ -351,6 +361,7 @@
             pic12.Location = new Point(298, 337);
             pic12.Name = "pic12";
             pic12.Size = new Size(289, 161);
+            pic12.SizeMode = PictureBoxSizeMode.StretchImage;
             pic12.TabIndex = 30;
             pic12.TabStop = false;
             // 
@@ -361,6 +372,7 @@
             pic13.Location = new Point(593, 337);
             pic13.Name = "pic13";
             pic13.Size = new Size(289, 161);
+            pic13.SizeMode = PictureBoxSizeMode.StretchImage;
             pic13.TabIndex = 31;
             pic13.TabStop = false;
             // 
@@ -371,6 +383,7 @@
             pic14.Location = new Point(888, 337);
             pic14.Name = "pic14";
             pic14.Size = new Size(289, 161);
+            pic14.SizeMode = PictureBoxSizeMode.StretchImage;
             pic14.TabIndex = 32;
             pic14.TabStop = false;
             // 
@@ -381,6 +394,7 @@
             pic15.Location = new Point(1183, 337);
             pic15.Name = "pic15";
             pic15.Size = new Size(290, 161);
+            pic15.SizeMode = PictureBoxSizeMode.StretchImage;
             pic15.TabIndex = 33;
             pic15.TabStop = false;
             // 
@@ -391,6 +405,7 @@
             pic16.Location = new Point(3, 504);
             pic16.Name = "pic16";
             pic16.Size = new Size(289, 162);
+            pic16.SizeMode = PictureBoxSizeMode.StretchImage;
             pic16.TabIndex = 34;
             pic16.TabStop = false;
             // 
@@ -401,6 +416,7 @@
             pic17.Location = new Point(298, 504);
             pic17.Name = "pic17";
             pic17.Size = new Size(289, 162);
+            pic17.SizeMode = PictureBoxSizeMode.StretchImage;
             pic17.TabIndex = 35;
             pic17.TabStop = false;
             // 
@@ -411,6 +427,7 @@
             pic18.Location = new Point(593, 504);
             pic18.Name = "pic18";
             pic18.Size = new Size(289, 162);
+            pic18.SizeMode = PictureBoxSizeMode.StretchImage;
             pic18.TabIndex = 36;
             pic18.TabStop = false;
             // 
@@ -421,6 +438,7 @@
             pic19.Location = new Point(888, 504);
             pic19.Name = "pic19";
             pic19.Size = new Size(289, 162);
+            pic19.SizeMode = PictureBoxSizeMode.StretchImage;
             pic19.TabIndex = 37;
             pic19.TabStop = false;
             // 
@@ -431,6 +449,7 @@
             pic20.Location = new Point(1183, 504);
             pic20.Name = "pic20";
             pic20.Size = new Size(290, 162);
+            pic20.SizeMode = PictureBoxSizeMode.StretchImage;
             pic20.TabIndex = 38;
             pic20.TabStop = false;
             // 
