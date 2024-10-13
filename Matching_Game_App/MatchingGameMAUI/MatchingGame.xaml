@@ -19,7 +19,7 @@
             <Button Text="Start Game" Grid.Column="0" Grid.Row="0"/>
             <Label Text="Player 1 Score: " Grid.Column="1" Grid.Row="0"/>
             <Label Text="0" Grid.Column="2" Grid.Row="0"/>
-            
+
             <Label Text="Click Start to Play" Grid.Column="0" Grid.Row="1" HorizontalTextAlignment="Center"/>
             <Label Text="Player 2 Score: " Grid.Column="1" Grid.Row="1"/>
             <Label Text="0" Grid.Column="2" Grid.Row="1"/>
