@@ -4,11 +4,12 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MatchingGameMAUI"
-    Shell.FlyoutBehavior="Disabled">
+    Shell.FlyoutBehavior="Disabled"
+    Title="MatchingGameMAUI">
 
     <ShellContent
         Title="Matching Game"
-        ContentTemplate="{DataTemplate local:MatchingGame}"
-        Route="MatchingGame" />
+        ContentTemplate="{DataTemplate local:MatchingGameMaui}"
+        Route="MatchingGameMaui" />
 
 </Shell>

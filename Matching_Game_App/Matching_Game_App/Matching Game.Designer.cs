@@ -125,7 +125,7 @@
             // 
             tlpStats.SetColumnSpan(btnStart, 2);
             btnStart.Dock = DockStyle.Fill;
-            btnStart.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            btnStart.Font = new Font("Segoe UI", 16F);
             btnStart.Location = new Point(3, 3);
             btnStart.Name = "btnStart";
             btnStart.Size = new Size(732, 75);
@@ -138,19 +138,18 @@
             lblStatus.AutoSize = true;
             tlpStats.SetColumnSpan(lblStatus, 2);
             lblStatus.Dock = DockStyle.Fill;
-            lblStatus.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            lblStatus.Font = new Font("Segoe UI", 16F);
             lblStatus.Location = new Point(3, 81);
             lblStatus.Name = "lblStatus";
             lblStatus.Size = new Size(732, 81);
             lblStatus.TabIndex = 2;
-            lblStatus.Text = "Click Start to Play";
             lblStatus.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblPlayer1
             // 
             lblPlayer1.AutoSize = true;
             lblPlayer1.Dock = DockStyle.Fill;
-            lblPlayer1.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPlayer1.Font = new Font("Segoe UI", 16F);
             lblPlayer1.Location = new Point(741, 0);
             lblPlayer1.Name = "lblPlayer1";
             lblPlayer1.Size = new Size(363, 81);
@@ -162,7 +161,7 @@
             // 
             lblPlayer2.AutoSize = true;
             lblPlayer2.Dock = DockStyle.Fill;
-            lblPlayer2.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPlayer2.Font = new Font("Segoe UI", 16F);
             lblPlayer2.Location = new Point(741, 81);
             lblPlayer2.Name = "lblPlayer2";
             lblPlayer2.Size = new Size(363, 81);
@@ -174,24 +173,22 @@
             // 
             lblPlayerOneScore.AutoSize = true;
             lblPlayerOneScore.Dock = DockStyle.Fill;
-            lblPlayerOneScore.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPlayerOneScore.Font = new Font("Segoe UI", 16F);
             lblPlayerOneScore.Location = new Point(1110, 0);
             lblPlayerOneScore.Name = "lblPlayerOneScore";
             lblPlayerOneScore.Size = new Size(363, 81);
             lblPlayerOneScore.TabIndex = 5;
-            lblPlayerOneScore.Text = "0";
             lblPlayerOneScore.TextAlign = ContentAlignment.BottomLeft;
             // 
             // lblPlayerTwoScore
             // 
             lblPlayerTwoScore.AutoSize = true;
             lblPlayerTwoScore.Dock = DockStyle.Fill;
-            lblPlayerTwoScore.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPlayerTwoScore.Font = new Font("Segoe UI", 16F);
             lblPlayerTwoScore.Location = new Point(1110, 81);
             lblPlayerTwoScore.Name = "lblPlayerTwoScore";
             lblPlayerTwoScore.Size = new Size(363, 81);
             lblPlayerTwoScore.TabIndex = 6;
-            lblPlayerTwoScore.Text = "0";
             lblPlayerTwoScore.TextAlign = ContentAlignment.BottomLeft;
             // 
             // tlpGameBoard
