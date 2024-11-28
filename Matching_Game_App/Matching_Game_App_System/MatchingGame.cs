@@ -63,7 +63,7 @@ namespace Matching_Game_App_System
             {"PlayerOne", "Player One"},
             {"PlayerTwo", "Player Two" }
         };
-        private List<string> CurrentTurnSelectedPieces = new();
+        private List<MatchingPiece> CurrentTurnSelectedPieces = new();
         private int NumClicks { get; set; } = 0;
         private bool IsWinForms { get; set; }
 
@@ -89,9 +89,9 @@ namespace Matching_Game_App_System
             {
                 MatchingPiece mp = this.MatchingPieces[index];
                 mp.SelectedImage = RevealedImage.FrontImage;
-                if (mp.FrontImage != "")
+                if (mp.FrontImage != "" && !CurrentTurnSelectedPieces.Contains(mp))
                 {
-                    CurrentTurnSelectedPieces.Add(mp.FrontImage);
+                    CurrentTurnSelectedPieces.Add(mp);
                     NumClicks++;
                 }
 
@@ -99,7 +99,7 @@ namespace Matching_Game_App_System
                 {
                     GameState = GameStateEnum.PostSecondPick;
 
-                    if (GameState == GameStateEnum.PostSecondPick && CurrentTurnSelectedPieces[0] == CurrentTurnSelectedPieces[1])
+                    if (GameState == GameStateEnum.PostSecondPick && CurrentTurnSelectedPieces[0].FrontImage == CurrentTurnSelectedPieces[1].FrontImage)
                     {
                         await Task.Delay(1000);
                         MatchingPieces
@@ -118,7 +118,7 @@ namespace Matching_Game_App_System
                         GameDescription = "Sorry, try again next time";
                         await Task.Delay(2000);
                         MatchingPieces
-                            .Where(m => m.FrontImage == CurrentTurnSelectedPieces[0] || m.FrontImage == CurrentTurnSelectedPieces[1])
+                            .Where(m => m.FrontImage == CurrentTurnSelectedPieces[0].FrontImage || m.FrontImage == CurrentTurnSelectedPieces[1].FrontImage)
                             .ToList()
                             .ForEach(m =>
                             {
