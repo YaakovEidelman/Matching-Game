@@ -24,11 +24,11 @@ public partial class MatchingGameMaui : ContentPage
         });
     }
 
-    private void Tgr_Tapped(object? sender, TappedEventArgs e)
+    private async void Tgr_Tapped(object? sender, TappedEventArgs e)
     {
         if (sender != null)
         {
-            game.RevealTile(lstpictures.IndexOf((Image)sender));
+            await game.RevealTile(lstpictures.IndexOf((Image)sender));
         }
     }
 

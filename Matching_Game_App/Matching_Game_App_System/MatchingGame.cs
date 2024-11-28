@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel;
-using System.IO;
 using static Matching_Game_App_System.MatchingPiece;
 
 namespace Matching_Game_App_System
@@ -7,8 +6,8 @@ namespace Matching_Game_App_System
     public class MatchingGame : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler? PropertyChanged;
-        public enum GameStateEnum { NotPlaying, Playing, PostSecondPick }
-        public enum CurrentTurnEnum { None, PlayerOne, PlayerTwo }
+        private enum GameStateEnum { NotPlaying, Playing, PostSecondPick }
+        private enum CurrentTurnEnum { None, PlayerOne, PlayerTwo }
 
         private int _playeronescore;
         private int _playertwoscore;
@@ -83,7 +82,7 @@ namespace Matching_Game_App_System
             PlaceImagesOnCards();
             SetStatus();
         }
-        public async void RevealTile(int index)
+        public async Task RevealTile(int index)
         {
             if (GameState == GameStateEnum.Playing)
             {
