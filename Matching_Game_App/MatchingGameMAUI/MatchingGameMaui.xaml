@@ -13,17 +13,41 @@
             <Setter Property="Padding" Value="10"/>
         </Style>
     </ContentPage.Resources>
-    <Grid Margin="10" RowDefinitions="*, 5*">
+    <Grid Margin="10" RowDefinitions="Auto, 3*">
 
-        <Grid RowDefinitions="*,*" ColumnDefinitions="10*,2*,8*" Grid.Row="0">
-            <Button Text="Start Game" Grid.Column="0" Grid.Row="0" Clicked="Button_Clicked"/>
-            <Label Text="Player 1 Score: " Grid.Column="1" Grid.Row="0"/>
-            <Label Text="{Binding PlayerOneScore}" Grid.Column="2" Grid.Row="0"/>
+        <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="*,*,*,*,*" Grid.Row="0">
+            <VerticalStackLayout Grid.Column="0" Grid.Row="0">
+                <Button Text="Start Game" Clicked="Button_Clicked"/>
+                <Label Text="{Binding GameDescription}" HorizontalTextAlignment="Center"/>
+            </VerticalStackLayout>
 
-            <Label Text="{Binding GameDescription}" Grid.Column="0" Grid.Row="1" HorizontalTextAlignment="Center"/>
-            <Label Text="Player 2 Score: " Grid.Column="1" Grid.Row="1"/>
-            <Label Text="{Binding PlayerTwoScore}" Grid.Column="2" Grid.Row="1"/>
+            <VerticalStackLayout Grid.Column="1" Grid.Row="0">
+                <Label Text="Player 1 Score: "/>
+                <Label Text="Player 2 Score: "/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Column="2" Grid.Row="0">
+                <Label Text="{Binding PlayerOneScore}"/>
+                <Label Text="{Binding PlayerTwoScore}"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Column="3" Grid.Row="0">
+                <Label Text="Player One Wins: "/>
+                <Label Text="Player Two Wins: "/>
+                <Label Text="Ties: "/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Column="4" Grid.Row="0">
+                <Label Text="" x:Name="PlayerOneTotalWins"/>
+                <Label Text="" x:Name="PlayerTwoTotalWins"/>
+                <Label Text="" x:Name="TotalTies"/>
+            </VerticalStackLayout>
+
+            <RadioButton x:Name="Rbgame1" Content="Game 1" Grid.Row="1" Grid.Column="1" CheckedChanged="Game_CheckedChanged" IsChecked="True"/>
+            <RadioButton x:Name="Rbgame2" Content="Game 2" Grid.Row="1" Grid.Column="2" CheckedChanged="Game_CheckedChanged"/>
+            <RadioButton x:Name="Rbgame3" Content="Game 3" Grid.Row="1" Grid.Column="3" CheckedChanged="Game_CheckedChanged"/>
         </Grid>
+
         <Grid RowDefinitions="*,*,*,*" ColumnDefinitions="*,*,*,*,*" Grid.Row="1">
 
             <Image x:Name="pic1" Source="{Binding SelectedImagePath}" Grid.Column="0" Grid.Row="0"/>
@@ -31,19 +55,19 @@
             <Image x:Name="pic3" Source="{Binding SelectedImagePath}" Grid.Column="2" Grid.Row="0"/>
             <Image x:Name="pic4" Source="{Binding SelectedImagePath}" Grid.Column="3" Grid.Row="0"/>
             <Image x:Name="pic5" Source="{Binding SelectedImagePath}" Grid.Column="4" Grid.Row="0"/>
-                   
+
             <Image x:Name="pic6" Source="{Binding SelectedImagePath}" Grid.Column="0" Grid.Row="1"/>
             <Image x:Name="pic7" Source="{Binding SelectedImagePath}" Grid.Column="1" Grid.Row="1"/>
             <Image x:Name="pic8" Source="{Binding SelectedImagePath}" Grid.Column="2" Grid.Row="1"/>
             <Image x:Name="pic9" Source="{Binding SelectedImagePath}" Grid.Column="3" Grid.Row="1"/>
             <Image x:Name="pic10" Source="{Binding SelectedImagePath}" Grid.Column="4" Grid.Row="1"/>
-            
+
             <Image x:Name="pic11" Source="{Binding SelectedImagePath}" Grid.Column="0" Grid.Row="2"/>
             <Image x:Name="pic12" Source="{Binding SelectedImagePath}" Grid.Column="1" Grid.Row="2"/>
             <Image x:Name="pic13" Source="{Binding SelectedImagePath}" Grid.Column="2" Grid.Row="2"/>
             <Image x:Name="pic14" Source="{Binding SelectedImagePath}" Grid.Column="3" Grid.Row="2"/>
             <Image x:Name="pic15" Source="{Binding SelectedImagePath}" Grid.Column="4" Grid.Row="2"/>
-            
+
             <Image x:Name="pic16" Source="{Binding SelectedImagePath}" Grid.Column="0" Grid.Row="3"/>
             <Image x:Name="pic17" Source="{Binding SelectedImagePath}" Grid.Column="1" Grid.Row="3"/>
             <Image x:Name="pic18" Source="{Binding SelectedImagePath}" Grid.Column="2" Grid.Row="3"/>

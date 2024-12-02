@@ -6,6 +6,7 @@ namespace Matching_Game_App_System
     public class MatchingGame : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler? PropertyChanged;
+        public event EventHandler? TotalWins;
         private enum GameStateEnum { NotPlaying, Playing, PostSecondPick }
         private enum CurrentTurnEnum { None, PlayerOne, PlayerTwo }
 
@@ -65,6 +66,10 @@ namespace Matching_Game_App_System
         private List<MatchingPiece> CurrentTurnSelectedPieces = new();
         private int NumClicks { get; set; } = 0;
         private bool IsWinForms { get; set; }
+
+        public static int PlayerOneTotalWins;
+        public static int PlayerTwoTotalWins;
+        public static int TotalTies;
 
 
 
@@ -206,7 +211,23 @@ namespace Matching_Game_App_System
         {
             if (CheckForEndGame())
             {
-                GameDescription = (PlayerOneScore > PlayerTwoScore) ? PlayersDesc["PlayerOne"] + " Wins" : (PlayerTwoScore > PlayerOneScore) ? PlayersDesc["PlayerTwo"] + " Wins" : "Tie Game"; //Players[CurrentTurn.ToString()] + " Wins";
+                //GameDescription = (PlayerOneScore > PlayerTwoScore) ? PlayersDesc["PlayerOne"] + " Wins" : (PlayerTwoScore > PlayerOneScore) ? PlayersDesc["PlayerTwo"] + " Wins" : "Tie Game";
+                if (PlayerOneScore > PlayerTwoScore)
+                {
+                    GameDescription = PlayersDesc["PlayerOne"] = "Wins";
+                    PlayerOneTotalWins++;
+                }
+                else if (PlayerOneScore < PlayerTwoScore)
+                {
+                    GameDescription = PlayersDesc["PlayerTwo"] + " Wins";
+                    PlayerTwoTotalWins++;
+                }
+                else
+                {
+                    GameDescription = "Tie Game";
+                    TotalTies++;
+                }
+                TotalWins?.Invoke(this, new EventArgs());
             }
             else if (CurrentTurn != CurrentTurnEnum.None)
             {
