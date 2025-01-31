@@ -1,0 +1,78 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center row">
+    <h1 class="display-4">Let's Play</h1>
+    <p>Play unlimited rounds of the classic matching game!!!</p>
+</div>
+
+<div class="row d-flex">
+    <div class="col-lg-6 text-center">
+        <h5 class="fw-bold">Wireframe</h5>
+        <img class="wireframe img-fluid" src="/images/matching game wireframe.png"/>
+    </div>
+    <div class="col-lg-6">
+        <h5 class="fw-bold">Overview</h5>
+        <p>
+            This document outlines the specifications for developing a matching game application using C#.
+            The game will be designed for two players who take turns revealing and matching cards.
+        </p>
+
+        <h5 class="fw-bold">Project Scope</h5>
+        <p>
+            The scope of this project includes designing and implementing a simple two-player matching game application in C#.
+            The game will emphasize logic and user interaction without incorporating graphics, animations, or sound effects.
+        </p>
+
+        <h5 class="fw-bold">Requirements</h5>
+        <h6 class="fw-semibold">Functional Requirements</h6>
+
+        <h6 class="fw-bold">User Interface</h6>
+        <ul>
+            <li>Design a user-friendly interface.</li>
+            <li>Include necessary controls such as buttons (representing cards), labels, and a start button.</li>
+            <li>Provide visual feedback for player actions (e.g., revealing cards, displaying messages).</li>
+        </ul>
+
+        <h6 class="fw-bold">Game Logic</h6>
+        <ul>
+            <li>Implement game logic for a two-player matching game.</li>
+            <li>Initialize the game with 2 sets of 10 cards, each represented by a button.</li>
+            <li>Ensure each button reveals a card when clicked.</li>
+            <li>Allow players to take turns revealing two cards.</li>
+            <li>If the revealed cards do not match, hide the cards and switch to the next player’s turn.</li>
+            <li>If the revealed cards match, increase the player's score by 1, keep the cards revealed, and allow the player to take another turn.</li>
+            <li>End the game when all matches are found.</li>
+        </ul>
+
+        <h6 class="fw-bold">Game Flow</h6>
+        <ul>
+            <li>At the beginning and end of the game, disable all card buttons.</li>
+            <li>Display a message prompting players to click "Start" to begin the game.</li>
+            <li>Provide messages during the game indicating when matches are found, whose turn it is, and who wins the game.</li>
+        </ul>
+
+        <h5 class="fw-bold">User Interface Components</h5>
+
+        <h6 class="fw-bold">Buttons</h6>
+        <ul>
+            <li>20 buttons representing the cards, arranged in a grid.</li>
+            <li>A "Start" button to initialize and start the game.</li>
+        </ul>
+
+        <h6 class="fw-bold">Labels</h6>
+        <ul>
+            <li>Display messages such as "Click Start to Play," player scores, and game status updates.</li>
+        </ul>
+
+        <h6 class="fw-bold">Messages</h6>
+        <ul>
+            <li><strong>Before the game starts:</strong> "Click Start to Play."</li>
+            <li><strong>During the game:</strong> Messages indicating matches, whose turn it is, and when the game ends.</li>
+            <li><strong>End of the game:</strong> Display the winner or if it’s a tie.</li>
+        </ul>
+    </div>
+</div>
